@@ -4,6 +4,8 @@ import { ThemeProvider } from 'styled-components'
 import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto'
 import { Loading } from "@/src/components/Loading";
 import { StatusBar } from "react-native";
+import { NewGroup } from "@/src/screens/NewGroup";
+import { Players } from "@/src/screens/Players";
 
 export default function RootLayout() {
 
@@ -16,7 +18,7 @@ export default function RootLayout() {
         backgroundColor="transparent"
         translucent        
       />
-      { fontsLoaded ? <Groups /> : <Loading />}
+      { fontsLoaded ? <Players /> : <Loading />}
     </ ThemeProvider>
   );
 }
